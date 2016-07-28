@@ -73,6 +73,9 @@ class Mobileclient(_Base):
 
         return self.session._is_subscribed
 
+    def login_with_token(self, token):
+        self.session.login_with_token(token)
+
     def login(self, email, password, android_id, locale='en_US'):
         """Authenticates the Mobileclient.
         Returns ``True`` on success, ``False`` on failure.

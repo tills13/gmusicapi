@@ -177,6 +177,10 @@ class Mobileclient(_Base):
         self._authtoken = None
         self._locale = None
         self._is_subscribed = None
+    
+    def login_with_token(self, token):
+        self._authtoken = token
+        self.is_authenticated = True
 
     def login(self, email, password, android_id, *args, **kwargs):
         """
